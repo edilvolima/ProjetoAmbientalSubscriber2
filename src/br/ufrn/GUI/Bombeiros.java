@@ -18,6 +18,21 @@ public class Bombeiros extends javax.swing.JFrame {
     public Bombeiros() {
         initComponents();
     }
+    
+    
+    
+    public void exibirInformacao(String informacao) {
+        String valores[] = informacao.split(";");
+        //valores[0] = area
+        //valores[1] = nome da function
+        //valores[2] = estado do contexto ou informacao relevante
+        
+        if (valores[1].equals("isFireMonitor")) {
+            //setar que tem incendio
+            
+        }
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
