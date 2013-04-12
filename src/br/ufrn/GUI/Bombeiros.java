@@ -72,15 +72,15 @@ public class Bombeiros extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -151,10 +151,13 @@ public class Bombeiros extends javax.swing.JFrame {
             jButton1.setText("ON");
             jButton1.setBackground(Color.GREEN);
             jButton1.setForeground(Color.RED);
+            jLabel2.setText("Clique para se desconectar do Hub");
         }else{
+            jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/SemFogo.png")));
             jButton1.setText("OFF");
             jButton1.setBackground(Color.RED);
             jButton1.setForeground(Color.GREEN);
+            jLabel2.setText("Clique para se conectar ao Hub");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
