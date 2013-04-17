@@ -12,10 +12,8 @@ import java.awt.Color;
  */
 public class Bombeiros extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SecretariaMeioAmbiente
-     */
-    private AtualizarSubscriber conexao = new AtualizarSubscriber(null);
+    private AtualizaSubscriber subscriberIsFire;
+    
     private String Texto;
 
     public Bombeiros() {
@@ -275,14 +273,20 @@ public class Bombeiros extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (jButton1.getText() == "Desconectado") {
-            conexao.subscribe();
+        if (jButton1.getText().equals("Desconectado")) {
+            
+            subscriberIsFire = new AtualizaSubscriber(AtualizaSubscriber.IS_FIRE, this);
+            
+            subscriberIsFire.subscribe();
+            
             jButton1.setText("Conectado");
             jButton1.setBackground(Color.GREEN);
             jButton1.setForeground(Color.RED);
             jLabel2.setText("Clique para se desconectar do Hub");
         } else {
-            conexao.unsubscribe();
+            
+            subscriberIsFire.unsubscribe();
+            
             labelFogoA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/SemFogo.png")));
             labelFogoA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/SemFogo.png")));
             labelFogoA3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/SemFogo.png")));
