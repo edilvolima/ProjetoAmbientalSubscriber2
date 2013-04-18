@@ -6,10 +6,6 @@ package br.ufrn.GUI;
 
 import br.ufrn.subscriber.Subscriber;
 
-/**
- *
- * @author Jorge
- */
 public class AtualizaSubscriber extends Subscriber{
 
     public static final String POLLUTION = "pollutionMonitor";
@@ -23,7 +19,7 @@ public class AtualizaSubscriber extends Subscriber{
     public static final String TRASH = "trashMonitor";
     public static final String GATHERING = "trashGathering";
     
-    Bombeiros subscriber = new Bombeiros();
+    Bombeiros subscriber;
     
     public AtualizaSubscriber(String topic, Bombeiros bombeiros) {
         super(topic);

@@ -14,7 +14,7 @@ public class Bombeiros extends javax.swing.JFrame {
 
     private AtualizaSubscriber subscriberIsFire;
     
-    private String Texto;
+    private String Texto = "";
 
     public Bombeiros() {
         initComponents();
@@ -30,28 +30,28 @@ public class Bombeiros extends javax.swing.JFrame {
             if (valores[2].equals("FIRE_ON")) {
                 if (valores[0].equals(Integer.toString(1))) {
                     labelFogoA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/Fogo.png")));
-                    Texto = Texto + "Fogo na área " + valores[0];
+                    Texto = Texto + "Fogo na área " + valores[0] + "\n";
                     jTextArea1.setText("" + Texto);
                     //setar que tem incendio
                 }
 
                 if (valores[0].equals(Integer.toString(2))) {
                     labelFogoA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/Fogo.png")));
-                    Texto = Texto + "Fogo na área " + valores[0];
+                    Texto = Texto + "Fogo na área " + valores[0] + "\n";
                     jTextArea1.setText("" + Texto);
                     //setar que tem incendio
                 }
 
                 if (valores[0].equals(Integer.toString(3))) {
                     labelFogoA3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/Fogo.png")));
-                    Texto = Texto + "Fogo na área " + valores[0];
+                    Texto = Texto + "Fogo na área " + valores[0] + "\n";
                     jTextArea1.setText("" + Texto);
                     //setar que tem incendio
                 }
 
                 if (valores[0].equals(Integer.toString(4))) {
                     labelFogoA4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ufrn/imagens/Fogo.png")));
-                    Texto = Texto + "Fogo na área " + valores[0];
+                    Texto = Texto + "Fogo na área " + valores[0] + "\n";
                     jTextArea1.setText("" + Texto);
                     //setar que tem incendio
                 }
